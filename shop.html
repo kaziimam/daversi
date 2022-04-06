@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/vendors/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/vendors/price-range-slider/price-range-slider.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Daversi Medical | Shop</title>
+  </head>
+  <body class="shop">
+    <!-- Site Header -->
+    <header class="site-header bg--white">
+      <div class="site-header__top bg--primary">
+        <div class="container d-flex justify-content-end justify-content-lg-between py-2 py-lg-3">
+          <p class="text--sm text--light m-0 d-none d-lg-inline-block">Orders may be processed with slight delay.</p>
+          <ul class="quick-links-menu d-flex justify-content-end">
+            <li class="quick-links-menu__item">
+              <a href="#" class="quick-links-menu__item--link d-none d-md-inline-block">Today's Deal</a>
+            </li>
+            <li class="quick-links-menu__item">
+              <a href="#" class="quick-links-menu__item--link d-none d-md-inline-block">Top Offers</a>
+            </li>
+            <!-- <li class="quick-links-menu__item">
+              <select id="languageSelectOption" placeholder-text="English">
+                <option value="1" class="select-dropdown__list-item">English</option>
+                <option value="2" class="select-dropdown__list-item">Item 2</option>
+                <option value="3" class="select-dropdown__list-item">Item 3</option>
+                <option value="4" class="select-dropdown__list-item">Item 4</option>
+              </select>
+            </li>
+            <li class="quick-links-menu__item">
+              <select id="currencySelectOption" placeholder-text="Item 1">
+                <option value="1" class="select-dropdown__list-item">USD($)</option>
+                <option value="2" class="select-dropdown__list-item">Item 2</option>
+                <option value="3" class="select-dropdown__list-item">Item 3</option>
+                <option value="4" class="select-dropdown__list-item">Item 4</option>
+              </select>
+            </li> -->
+            <li class="quick-links-menu__item">
+              <a href="/login.html" class="quick-links-menu__item--link">Login/Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-header__bottom">
+        <div class="container py-3 d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <a href="/" class="site-header__logo--link d-inline-block me-lg-4">
+              <img src="./assets/images/Daversi-Medical-Logo.png" alt="Logo" class="site-header__logo" />
+            </a>
+            <ul class="site-header-nav-menu d-none d-lg-flex">
+              <li class="site-header-nav-menu__item">
+                <a href="/" class="site-header-nav-menu__item--link active">Home</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/about-us.html" class="site-header-nav-menu__item--link">About Us</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="shop.html" class="site-header-nav-menu__item--link">Shop</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/faqs.html" class="site-header-nav-menu__item--link">FAQs</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/contact-us.html" class="site-header-nav-menu__item--link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="site-header__cta-container d-flex align-items-center">
+              <a href="#" class="cta-button cta-button--search" id="siteHeaderSearchButton">
+                <span class="cta-button__icon"><i class="bi bi-search"></i></span>
+              </a>
+              <a href="/cart.html" class="cta-button cta-button--cart">
+                <span class="cta-button__icon"><i class="bi bi-basket-fill"></i></span>
+                <span class="cta-button__count-val">2</span>
+              </a>
+              <a href="/wishlist.html" class="cta-button cta-button--wishlist">
+                <span class="cta-button__icon"><i class="bi bi-heart-fill"></i></span>
+                <span class="cta-button__count-val">2</span>
+              </a>
+              <a href="#" class="site-header__contact-button d-none d-md-flex align-items-center d-lg-none d-xl-flex">
+                <img src="./assets/images/contact-header-icon.png" alt="contact button icon" class="contact-button__icon" />
+                <div class="contact-button__content ms-1">
+                  <h6 class="text--primary m-0">415-205-5550</h6>
+                  <p class="text--para text--xs m-0">24/7 Emergency Phone</p>
+                </div>
+              </a>
+            </div>
+            <button class="site-header__button--nav-toggler d-lg-none ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavigation" aria-controls="offcanvasExample">
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavigation" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="site-header-nav-menu">
+              <li class="site-header-nav-menu__item">
+                <a href="/" class="site-header-nav-menu__item--link active">Home</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/about-us.html" class="site-header-nav-menu__item--link">About Us</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/shop.html" class="site-header-nav-menu__item--link">Shop</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/faqs.html" class="site-header-nav-menu__item--link">FAQs</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/contact-us.html" class="site-header-nav-menu__item--link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- search form -->
+      <div class="search-form-container" id="searchFormContainer">
+        <div class="form search-form" id="searchForm">
+          <div class="d-flex align-items-center">
+            <div class="form__field m-0">
+              <input type="text" class="search-form__input" placeholder="Search product here..." required />
+              <button type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+            <button class="search-form-container__button--close ms-3" id="searchFormContainerClose">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="site-content">
+    <!-- page title -->
+    <section class="page-title-section d-flex justify-content-center align-items-center">
+      <div class="container">
+        <h3 class="page-title text-center">Shop</h3>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb d-flex justify-content-center p-0">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shop</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Shop Product Grid -->
+    <section class="section--padding products-listing-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4 col-xxl-3 pe-lg-5">
+            <div class="products-listing__sidebar d-none d-lg-block">
+              <div class="bg--light border-custom-1 border-radius--custom p-4 mb-4">
+                <h6 class="text--heading mb-3">Filter by price</h6>
+                <div class="row slider-labels justify-content-between mb-3">
+                       <span id="slider-range-value1" class="slider-range-value d-inline-block w-auto"></span>
+                       <span id="slider-range-value2" class="slider-range-value d-inline-block w-auto"></span>
+                 </div>
+                 <div class="col-sm-12 p-0">
+                    <div id="slider-range"></div>
+                    <div class="mt-3 text-end">
+                      <button class="prouct-listing-filter__button--apply button button__primary px-3 py-2 d-inline-block">Filter</button>
+                    </div>
+                 </div>
+              </div>
+              <div class="bg--light border-custom-1 border-radius--custom p-4 mb-4">
+                <h6 class="text--heading mb-3">Categories</h6>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="emergency_medical_supplies" id="emergency_medical_supplies" />
+                  <label class="form-check-label" for="flexCheckChecked">Emergency Medical Supplies & Equipment</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="surgical_equipment" id="surgical_equipment" />
+                  <label class="form-check-label" for="flexCheckChecked">Surgical Supplies & Equipment</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="orthopedic_products" id="orthopedic_products" />
+                  <label class="form-check-label" for="flexCheckChecked">Orthopedic Products</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="rehab_equipment" id="rehab_equipment" />
+                  <label class="form-check-label" for="flexCheckChecked">Rehabilitation Equipment & Supplies</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="patient_care" id="patient_care" />
+                  <label class="form-check-label" for="flexCheckChecked">Patient Care</label>
+                </div>
+                <a href="#" class="d-inline-block text--sm font-medius text-underline mt-2 product-listing__link--view-more-brands">View More</a>
+              </div>
+              <div class="bg--light border-custom-1 border-radius--custom p-4 mb-4">
+                <h6 class="text--heading mb-3">Popular Dealer</h6>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="allergy_clinic" id="allergy_clinic" />
+                  <label class="form-check-label" for="flexCheckChecked">Allergy Clinic</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="biozen" id="biozen" />
+                  <label class="form-check-label" for="flexCheckChecked">BioZen</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="med_care" id="med_care" />
+                  <label class="form-check-label" for="flexCheckChecked">Med Care</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="primacy" id="primacy" />
+                  <label class="form-check-label" for="flexCheckChecked">Primacy</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="search_lab" id="search_lab" />
+                  <label class="form-check-label" for="flexCheckChecked">Search Lab</label>
+                </div>
+                <a href="#" class="d-inline-block text--sm font-medius text-underline mt-2 product-listing__link--view-more-brands">View More</a>
+              </div>
+              <div class="bg--light border-custom-1 border-radius--custom p-4 mb-4">
+                <h6 class="text--heading mb-3">Filter by discount</h6>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="10%Off" id="off_10_percent" />
+                  <label class="form-check-label" for="flexCheckChecked">10% Off</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="20%Off" id="off_20_percent" />
+                  <label class="form-check-label" for="flexCheckChecked">20% Off</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="30%Off" id="off_30_percent" />
+                  <label class="form-check-label" for="flexCheckChecked">30% Off</label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" value="40%Off" id="off_40_percent" />
+                  <label class="form-check-label" for="flexCheckChecked">40% Off</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-8 col-xxl-9">
+            <div class="mb-5 d-flex flex-wrap flex-lg-nowrap justify-content-between align-items-center">
+              <p class="text--sm text--para mb-4 mb-lg-0 w-100 text-center text-lg-start">Showing <span class="text--secondary product-listing__show-product-count">12</span> products out of <span class="text--primary product-listing__show-product-total-count">200</span></p>
+              <button class="product-listing-filter__button--toggler button button__primary px-3 py-2 d-inline-block d-lg-none"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopProductListingFilter" aria-controls="offcanvasTop">
+                <span><i class="bi bi-funnel"></i></span>
+                <span>Filter</span>
+              </button>
+              <div class="offcanvas offcanvas-top product-listing-filter__offcanvas" tabindex="-1" id="offcanvasTopProductListingFilter" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-body p-0">
+                  <div class="d-flex align-items-start">
+                    <div class="nav flex-column nav-pills me-3 bg--light" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <button class="nav-link active" id="v-pills-pricefilter-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pricefilter" type="button" role="tab" aria-controls="v-pills-pricefilter" aria-selected="true">Filter By Price</button>
+                      <button class="nav-link" id="v-pills-categoriesfilter-tab" data-bs-toggle="pill" data-bs-target="#v-pills-categoriesfilter" type="button" role="tab" aria-controls="v-pills-categoriesfilter" aria-selected="true">Categories</button>
+                      <button class="nav-link" id="v-pills-dealerfilter-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dealerfilter" type="button" role="tab" aria-controls="v-pills-dealerfilter" aria-selected="false">Popular Dealer</button>
+                      <button class="nav-link" id="v-pills-discountfilter-tab" data-bs-toggle="pill" data-bs-target="#v-pills-discountfilter" type="button" role="tab" aria-controls="v-pills-discountfilter" aria-selected="false">Filter By Discount</button>
+                   
+                    </div>
+                    <div class="tab-content p-3" id="v-pills-tabContent">
+                      <div class="tab-pane fade show active" id="v-pills-pricefilter" role="tabpanel" aria-labelledby="v-pills-pricefilter-tab">
+                        <div>
+                          <div class="row slider-labels justify-content-between mb-3">
+                                 <span id="slider-range-value1-sm" class="slider-range-value d-inline-block w-auto"></span>
+                                 <span id="slider-range-value2-sm" class="slider-range-value d-inline-block w-auto"></span>
+                           </div>
+                           <div class="col-sm-12 p-0">
+                              <div id="slider-range-sm"></div>
+                           </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-categoriesfilter" role="tabpanel" aria-labelledby="v-pills-categoriesfilter-tab">
+                        <div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="emergency_medical_supplies" id="emergency_medical_supplies" />
+                            <label class="form-check-label" for="flexCheckChecked">Emergency Medical Supplies & Equipment</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="surgical_equipment" id="surgical_equipment" />
+                            <label class="form-check-label" for="flexCheckChecked">Surgical Supplies & Equipment</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="orthopedic_products" id="orthopedic_products" />
+                            <label class="form-check-label" for="flexCheckChecked">Orthopedic Products</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="rehab_equipment" id="rehab_equipment" />
+                            <label class="form-check-label" for="flexCheckChecked">Rehabilitation Equipment & Supplies</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="patient_care" id="patient_care" />
+                            <label class="form-check-label" for="flexCheckChecked">Patient Care</label>
+                          </div>
+                          <a href="#" class="d-inline-block text--sm font-medius text-underline mt-2 product-listing__link--view-more-brands">View More</a>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-dealerfilter" role="tabpanel" aria-labelledby="v-pills-dealerfilter-tab">
+                        <div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="allergy-clinic" id="allergy_clinic" />
+                            <label class="form-check-label" for="flexCheckChecked">Allergy Clinic</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="biozen" id="biozen" />
+                            <label class="form-check-label" for="flexCheckChecked">BioZen</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="med-care" id="med_care" />
+                            <label class="form-check-label" for="flexCheckChecked">Med Care</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="primacy" id="primacy" />
+                            <label class="form-check-label" for="flexCheckChecked">Primacy</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="search-lab" id="search_lab" />
+                            <label class="form-check-label" for="flexCheckChecked">Search Lab</label>
+                          </div>
+                          <a href="#" class="d-inline-block text--sm font-medius text-underline mt-2 product-listing__link--view-more-brands">View More</a>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="v-pills-discountfilter" role="tabpanel" aria-labelledby="v-pills-discountfilter-tab">
+                        <div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="10%Off" id="off_10_percent" />
+                            <label class="form-check-label" for="flexCheckChecked">10% Off</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="20%Off" id="off_20_percent" />
+                            <label class="form-check-label" for="flexCheckChecked">20% Off</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="30%Off" id="off_30_percent" />
+                            <label class="form-check-label" for="flexCheckChecked">30% Off</label>
+                          </div>
+                          <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" value="40%Off" id="off_40_percent" />
+                            <label class="form-check-label" for="flexCheckChecked">40% Off</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end w-100 offcanvas__footer py-3 px-3 bg--light">
+                      <button class="button button__primary py-2 px-3 product-listing-filter__button--close-offcanvas" data-bs-dismiss="offcanvas">Close</button>
+                      <button class="button button__secondary py-2 px-3 ms-2 product-listing-filter__button--apply">Apply</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <select id="productListingSorting" placeholder-text="Sort by" class="products-listing--sorting">
+                <option value="default" class="select-dropdown__list-item" selected>Default</option>
+                <option value="popularity" class="select-dropdown__list-item">Popularity</option>
+                <option value="latest" class="select-dropdown__list-item">Latest</option>
+                <option value="lowToHigh" class="select-dropdown__list-item">Price: Low to High</option>
+                <option value="highToLow" class="select-dropdown__list-item">Price: High to Low</option>
+              </select>
+            </div>
+            <div class="product-listing row" id="productsListingRow"></div>
+            <div class="d-flex justify-content-end mt-3">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item active" aria-current="page""><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                  </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top bg--dark pt-5 pb-2">
+        <div class="container">
+          <div class="newsletter-form-container">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-12 col-lg-6">
+                <h3 class="text--light text-center text-lg-start mb-3 mb-lg-0 mx-md-5 mx-lg-0">Join Our Newsletter And Get $45 Discount For Your First Order</h3>
+              </div>
+              <div class="col-12 col-md-12 col-lg-6">
+                <form action="#" class="form newsletter-form mx-md-5 mx-lg-0">
+                  <div class="form__field bg--white d-flex">
+                    <input type="email" name="s_email" class="news-letter-form__input" placeholder="Enter Your Email Here" required />
+                    <button type="submit" class="button button__primary">Subscirbe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__main bg--dark py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+              <h4 class="text--light">Useful Links</h4>
+              <ul class="footer-menu">
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Shipping Options</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">My Wishlist</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">My Account</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Return Policy</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Shopping FAQs</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+              <h4 class="text--light">Products</h4>
+              <ul class="footer-menu">
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Thermometer</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Vitamis & Suppliments</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Temperature Gun</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Oxygen Meter & Mask</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Shopping & Returns</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-3">
+              <h4 class="text--light">Customer Service</h4>
+              <ul class="footer-menu">
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Site Map</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Wishlist</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Brands</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Gift Certificates</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Affiliate</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-3">
+              <h4 class="text--light">Store Location</h4>
+              <div class="icon-box text--light-muted d-flex mb-3">
+                <div class="icon-box__icon me-2">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="icon-box__content">
+                  <p>104 Flanian Oaks Drive, ACOVILLE West Virginia, California</p>
+                </div>
+              </div>
+              <div class="icon-box text--light-muted d-flex">
+                <div class="icon-box__icon me-2">
+                  <i class="bi bi-alarm-fill"></i>
+                </div>
+                <div class="icon-box__content">
+                  <p>
+                    Monday-Friday: 8am - 4pm<br />
+                    Saturday: 9am - 5pm
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-5 mb-3 mb-lg-0">
+              <p class="text--light-muted text--sm m-0 text-center text-lg-start">© 2022 All Rights Reserved. Dented Code.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-7">
+              <ul class="footer-bottom-menu d-flex flex-wrap justify-content-center justify-content-lg-end">
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link">Privacy</a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link">Terms</a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link">Sitemap</a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header justify-content-end px-2 pt-2 pb-0">
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body px-3 pt-2 pb-3">
+            <span class="toast-body__icon me-2"></span>
+            <span class="toast-body__text text--primary"></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/vendors/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendors/jquery.js"></script>
+    <script src="./assets/vendors/custom-dropdown-from-select-pure-js/dist/script.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/vendors/price-range-slider/price-range-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-image-zoom/js-image-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
