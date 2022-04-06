@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/vendors/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/vendors/price-range-slider/price-range-slider.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Daversi Medical | Home</title>
+  </head>
+  <body class="home">
+    <!-- Site Header -->
+    <header class="site-header bg--white">
+      <div class="site-header__top bg--primary">
+        <div class="container d-flex justify-content-end justify-content-lg-between py-2 py-lg-3">
+          <p class="text--sm text--light m-0 d-none d-lg-inline-block">Orders may be processed with slight delay.</p>
+          <ul class="quick-links-menu d-flex justify-content-end">
+            <li class="quick-links-menu__item">
+              <a href="#" class="quick-links-menu__item--link d-none d-md-inline-block">Today's Deal</a>
+            </li>
+            <li class="quick-links-menu__item">
+              <a href="#" class="quick-links-menu__item--link d-none d-md-inline-block">Top Offers</a>
+            </li>
+            <!-- <li class="quick-links-menu__item">
+              <select id="languageSelectOption" placeholder-text="English">
+                <option value="1" class="select-dropdown__list-item">English</option>
+                <option value="2" class="select-dropdown__list-item">Item 2</option>
+                <option value="3" class="select-dropdown__list-item">Item 3</option>
+                <option value="4" class="select-dropdown__list-item">Item 4</option>
+              </select>
+            </li>
+            <li class="quick-links-menu__item">
+              <select id="currencySelectOption" placeholder-text="Item 1">
+                <option value="1" class="select-dropdown__list-item">USD($)</option>
+                <option value="2" class="select-dropdown__list-item">Item 2</option>
+                <option value="3" class="select-dropdown__list-item">Item 3</option>
+                <option value="4" class="select-dropdown__list-item">Item 4</option>
+              </select>
+            </li> -->
+            <li class="quick-links-menu__item">
+              <a href="/login.html" class="quick-links-menu__item--link">Login/Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-header__bottom">
+        <div class="container py-3 d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <a href="/" class="site-header__logo--link d-inline-block me-lg-4">
+              <img src="./assets/images/Daversi-Medical-Logo.png" alt="Logo" class="site-header__logo" />
+            </a>
+            <ul class="site-header-nav-menu d-none d-lg-flex">
+              <li class="site-header-nav-menu__item">
+                <a href="/" class="site-header-nav-menu__item--link active">Home</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/about-us.html" class="site-header-nav-menu__item--link">About Us</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/shop.html" class="site-header-nav-menu__item--link">Shop</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/faqs.html" class="site-header-nav-menu__item--link">FAQs</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/contact-us.html" class="site-header-nav-menu__item--link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="site-header__cta-container d-flex align-items-center">
+              <a href="#" class="cta-button cta-button--search" id="siteHeaderSearchButton">
+                <span class="cta-button__icon"><i class="bi bi-search"></i></span>
+              </a>
+              <a href="/cart.html" class="cta-button cta-button--cart">
+                <span class="cta-button__icon"><i class="bi bi-basket-fill"></i></span>
+                <span class="cta-button__count-val">2</span>
+              </a>
+              <a href="/wishlist.html" class="cta-button cta-button--wishlist">
+                <span class="cta-button__icon"><i class="bi bi-heart-fill"></i></span>
+                <span class="cta-button__count-val">2</span>
+              </a>
+              <a href="#" class="site-header__contact-button d-none d-md-flex align-items-center d-lg-none d-xl-flex">
+                <img src="./assets/images/contact-header-icon.png" alt="contact button icon" class="contact-button__icon" />
+                <div class="contact-button__content ms-1">
+                  <h6 class="text--primary m-0">415-205-5550</h6>
+                  <p class="text--para text--xs m-0">24/7 Emergency Phone</p>
+                </div>
+              </a>
+            </div>
+            <button class="site-header__button--nav-toggler d-lg-none ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavigation" aria-controls="offcanvasExample">
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavigation" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header justify-content-end">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="site-header-nav-menu">
+              <li class="site-header-nav-menu__item">
+                <a href="/" class="site-header-nav-menu__item--link active">Home</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/about-us.html" class="site-header-nav-menu__item--link">About Us</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/shop.html" class="site-header-nav-menu__item--link">Shop</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/faqs.html" class="site-header-nav-menu__item--link">FAQs</a>
+              </li>
+              <li class="site-header-nav-menu__item">
+                <a href="/contact-us.html" class="site-header-nav-menu__item--link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- search form -->
+      <div class="search-form-container" id="searchFormContainer">
+        <div class="form search-form" id="searchForm">
+          <div class="d-flex align-items-center">
+            <div class="form__field m-0">
+              <input type="text" class="search-form__input" placeholder="Search product here..." required />
+              <button type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+            <button class="search-form-container__button--close ms-3" id="searchFormContainerClose">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="site-content">
+      <!-- Hero Section -->
+      <section class="hero-section position-relative">
+        <!-- Slider main container -->
+        <div class="swiper swiper-hero">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" style="background-image: url(./assets/images/banner-slider.png)"></div>
+            <div class="swiper-slide" style="background-image: url(./assets/images/banner-2.jpg)"></div>
+            <div class="swiper-slide" style="background-image: url(./assets/images/banner-3.jpg)"></div>
+          </div>
+          <!-- If we need pagination 
+        <div class="swiper-pagination"></div>-->
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="hero-section__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-12 col-lg-6 justify-content-center text-center justify-content-lg-start text-lg-start">
+                <p class="text--secondary bg--white px-4 py-2 d-inline-block content__subheading">UP TO 50% OFF TODAY</p>
+                <h2 class="text--heading content__heading">Flat 5% extra on medicines & Enjoy FREE DELIVERY</h2>
+                <p class="text--heading">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non assumenda labore velit!</p>
+                <p><a href="/shop.html" class="button button__primary d-inline-block">Shop Now</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Promo Section -->
+      <section class="promo-section pt-5 pt-lg-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-4 promo-block-container">
+              <div class="promo-block promo-block--1 border-radius--custom overflow-hidden position-relative">
+                <div class="row justify-content-end">
+                  <div class="promo-block__bg"></div>
+                  <div class="col-9 col-md-7 col-lg-9 col-xl-7 promo-block__content">
+                    <p class="text--xs promo-block__subheading mb-2">HOME MEDICAL SUPPLIES</p>
+                    <h4 class="text--heading promo-block__heading mb-2">Portable Mesh Atomizer</h4>
+                    <p class="text--heading text--xs mb-2">Starts from</p>
+                    <h6><span class="promo-block__regular-price">$56.00</span><span class="promo-block__sale-price text--heading">$47.00</span></h6>
+                    <a href="/shop.html" class="d-inline-block button">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4 promo-block-container">
+              <div class="promo-block promo-block--2 border-radius--custom overflow-hidden position-relative">
+                <div class="row justify-content-end">
+                  <div class="promo-block__bg"></div>
+                  <div class="col-9 col-md-7 col-lg-9 col-xl-7 promo-block__content">
+                    <p class="text--xs promo-block__subheading mb-2">HOME MEDICAL SUPPLIES</p>
+                    <h4 class="text--heading promo-block__heading mb-2">Portable Mesh Atomizer</h4>
+                    <p class="text--heading text--xs mb-2">Starts from</p>
+                    <h6><span class="promo-block__regular-price">$56.00</span><span class="promo-block__sale-price text--heading">$47.00</span></h6>
+                    <a href="/shop.html" class="d-inline-block button">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-4 promo-block-container">
+              <div class="promo-block promo-block--3 border-radius--custom overflow-hidden position-relative">
+                <div class="row justify-content-end">
+                  <div class="promo-block__bg"></div>
+                  <div class="col-9 col-md-7 col-lg-9 col-xl-7 promo-block__content">
+                    <p class="text--xs promo-block__subheading mb-2">HOME MEDICAL SUPPLIES</p>
+                    <h4 class="text--heading promo-block__heading mb-2">Portable Mesh Atomizer</h4>
+                    <p class="text--heading text--xs mb-2">Starts from</p>
+                    <h6><span class="promo-block__regular-price">$56.00</span><span class="promo-block__sale-price text--heading">$47.00</span></h6>
+                    <a href="/shop.html" class="d-inline-block button">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- New Arrivals Product Section -->
+      <section class="new-arrival-section section--padding">
+        <div class="container">
+          <div class="section__header d-flex align-items-center justify-content-between mb-4">
+            <div class="d-flex align-items-center">
+              <h3 class="text--heading section__heading me-2 mb-0">New Arrivals</h3>
+              <span class="section-heading__side-divider"></span>
+            </div>
+            <a href="#" class="button button__primary">View All</a>
+          </div>
+          <div class="row" id="newArrivalProducts">
+            <!-- <div class="col-6 col-md-4 col-lg-4 col-xl-3 mb-3">
+                    <div class="product-card">
+                        <div class="product-card__header">
+                            <img src="./assets/images/dummy-product.jpg" alt="" class="product-card__thumbnail">
+                            <div class="product-card__cta-container d-flex justify-content-center">
+                                <a href="#" class="product-card__cta-button product-card__cta-button--wishlist">
+                                    <i class="bi bi-heart-fill"></i>
+                                </a>
+                                <a href="#" class="product-card__cta-button product-card__cta-button--cart">
+                                    <span class="cta-button__icon"><i class="bi bi-basket-fill"></i></span>
+                                </a>
+                                <a href="#" class="product-card__cta-button product-card__cta-button--info">
+                                    <i class="bi bi-arrows-angle-expand"></i>
+                                </a>
+                            </div>
+                            <span class="product-card__discount-value">30% Off</span>
+                        </div>
+                        <div class="product-card__content">
+                            <div class="product-card__title">Product Title 1</div>
+                            <div class="product-card__price">
+                                <span class="price-regular"></span>
+                                <span class="price-sale">$70.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- Second Ad Section -->
+      <section class="promo-section promo-section--v2 section--padding--top-only">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 col-xl-8 promo-block-container">
+              <div class="promo-block promo-block--4 border-radius--custom overflow-hidden position-relative">
+                <div class="row justify-content-start">
+                  <div class="promo-block__bg"></div>
+                  <div class="col-9 col-md-7 col-lg-9 col-xl-7 promo-block__content">
+                    <p class="text--xs promo-block__subheading mb-2 text--heading">HOME MEDICAL SUPPLIES</p>
+                    <h4 class="text--heading promo-block__heading mb-2">Portable Mesh Atomizer</h4>
+                    <p class="text--heading text--xs mb-2">Starts from</p>
+                    <h6><span class="promo-block__regular-price">$56.00</span><span class="promo-block__sale-price text--heading">$47.00</span></h6>
+                    <a href="/shop.html" class="d-inline-block button button__primary">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6 col-xl-4 promo-block-container">
+              <div class="promo-block promo-block--5 border-radius--custom overflow-hidden position-relative">
+                <div class="row justify-content-start">
+                  <div class="promo-block__bg"></div>
+                  <div class="col-9 col-md-7 col-lg-9 promo-block__content">
+                    <p class="text--xs promo-block__subheading mb-2 text--heading">HOME MEDICAL SUPPLIES</p>
+                    <h4 class="text--heading promo-block__heading mb-2">Portable Mesh Atomizer</h4>
+                    <p class="text--heading text--xs mb-2">Starts from</p>
+                    <h6><span class="promo-block__regular-price">$56.00</span><span class="promo-block__sale-price text--heading">$47.00</span></h6>
+                    <a href="/shop.html" class="d-inline-block button button__primary">Shop Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Shop By Categories Section -->
+      <section class="categories-section section--padding">
+        <div class="container">
+          <div class="section__header d-flex align-items-center justify-content-between mb-4">
+            <div class="d-flex align-items-center">
+              <h3 class="text--heading section__heading me-2 mb-0">Shop By Categories</h3>
+              <span class="section-heading__side-divider"></span>
+            </div>
+            <!-- <a href="#" class="button button__primary">View All</a> -->
+          </div>
+          <div class="swiper swiper-categories">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a href="#" class="category-block bg--light d-block p-3 p-md-4 border-radius--custom border-custom-1">
+                  <div class="category-block__image">
+                    <img src="./assets/images/categorie-1.png" alt="categorie-1" />
+                  </div>
+                  <div class="category-block__content">
+                    <p class="text--heading m-0">Hospital Equipment</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="category-block bg--light d-block p-3 p-md-4 border-radius--custom border-custom-1">
+                  <div class="category-block__image">
+                    <img src="./assets/images/categorie-2.png" alt="" />
+                  </div>
+                  <div class="category-block__content">
+                    <p class="text--heading m-0">Hospital Equipment</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="category-block bg--light d-block p-3 p-md-4 border-radius--custom border-custom-1">
+                  <div class="category-block__image">
+                    <img src="./assets/images/categorie-3.png" alt="" />
+                  </div>
+                  <div class="category-block__content">
+                    <p class="text--heading m-0">Hospital Equipment</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="category-block bg--light d-block p-3 p-md-4 border-radius--custom border-custom-1">
+                  <div class="category-block__image">
+                    <img src="./assets/images/categorie-5.png" alt="" />
+                  </div>
+                  <div class="category-block__content">
+                    <p class="text--heading m-0">Hospital Equipment</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="category-block bg--light d-block p-3 p-md-4 border-radius--custom border-custom-1">
+                  <div class="category-block__image">
+                    <img src="./assets/images/categorie-6.png" alt="" />
+                  </div>
+                  <div class="category-block__content">
+                    <p class="text--heading m-0">Hospital Equipment</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="category-block bg--light d-block p-3 p-md-4 border-radius--custom border-custom-1">
+                  <div class="category-block__image">
+                    <img src="./assets/images/categorie-1.png" alt="" />
+                  </div>
+                  <div class="category-block__content">
+                    <p class="text--heading m-0">Hospital Equipment</p>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="category-block bg--light d-block p-3 p-md-4 border-radius--custom border-custom-1">
+                  <div class="category-block__image">
+                    <img src="./assets/images/categorie-2.png" alt="" />
+                  </div>
+                  <div class="category-block__content">
+                    <p class="text--heading m-0">Hospital Equipment</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- If we need pagination 
+          <div class="swiper-pagination"></div>-->
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Site CTA Section -->
+      <section class="section--padding site-cta-section bg--dark">
+        <div class="container">
+          <div class="row align-items-center text-center text-lg-start">
+            <div class="col-12 col-md-6 col-lg-6">
+              <h3 class="text--light mb-4 mb-lg-0">Duis aute irure dolor in reprehenderit in voluptate velit esse</h3>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 text-lg-end">
+              <a href="#" class="button button__secondary d-inline-block">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Best Sellers Section -->
+      <section class="new-arrival-section section--padding">
+        <div class="container">
+          <div class="section__header d-flex align-items-center justify-content-between mb-4">
+            <div class="d-flex align-items-center">
+              <h3 class="text--heading section__heading me-2 mb-0">Best Selling</h3>
+              <span class="section-heading__side-divider"></span>
+            </div>
+
+            <a href="#" class="button button__primary">View All</a>
+          </div>
+          <div class="row" id="bestSellingProducts"></div>
+        </div>
+      </section>
+      <!-- Testimonial Seciton -->
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top bg--dark pt-5 pb-2">
+        <div class="container">
+          <div class="newsletter-form-container">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-12 col-lg-6">
+                <h3 class="text--light text-center text-lg-start mb-3 mb-lg-0 mx-md-5 mx-lg-0">Join Our Newsletter And Get $45 Discount For Your First Order</h3>
+              </div>
+              <div class="col-12 col-md-12 col-lg-6">
+                <form action="#" class="form newsletter-form mx-md-5 mx-lg-0">
+                  <div class="form__field bg--white d-flex">
+                    <input type="email" name="s_email" class="news-letter-form__input" placeholder="Enter Your Email Here" required />
+                    <button type="submit" class="button button__primary">Subscirbe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__main bg--dark py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+              <h4 class="text--light">Useful Links</h4>
+              <ul class="footer-menu">
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Shipping Options</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">My Wishlist</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">My Account</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Return Policy</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Shopping FAQs</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+              <h4 class="text--light">Products</h4>
+              <ul class="footer-menu">
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Thermometer</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Vitamis & Suppliments</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Temperature Gun</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Oxygen Meter & Mask</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Shopping & Returns</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-3">
+              <h4 class="text--light">Customer Service</h4>
+              <ul class="footer-menu">
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Site Map</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Wishlist</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Brands</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Gift Certificates</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#" class="footer-menu__item--link">Affiliate</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-lg-3">
+              <h4 class="text--light">Store Location</h4>
+              <div class="icon-box text--light-muted d-flex mb-3">
+                <div class="icon-box__icon me-2">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="icon-box__content">
+                  <p>104 Flanian Oaks Drive, ACOVILLE West Virginia, California</p>
+                </div>
+              </div>
+              <div class="icon-box text--light-muted d-flex">
+                <div class="icon-box__icon me-2">
+                  <i class="bi bi-alarm-fill"></i>
+                </div>
+                <div class="icon-box__content">
+                  <p>
+                    Monday-Friday: 8am - 4pm<br />
+                    Saturday: 9am - 5pm
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-5 mb-3 mb-lg-0">
+              <p class="text--light-muted text--sm m-0 text-center text-lg-start">© 2022 All Rights Reserved. Dented Code.</p>
+            </div>
+            <div class="col-12 col-md-12 col-lg-7">
+              <ul class="footer-bottom-menu d-flex flex-wrap justify-content-center justify-content-lg-end">
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link">Privacy</a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link">Terms</a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link">Sitemap</a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link" target="_blank">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li class="footer-bottom-menu__item">
+                  <a href="#" class="footer-bottom-menu__item--link" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header justify-content-end px-2 pt-2 pb-0">
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body px-3 pt-2 pb-3">
+            <span class="toast-body__icon me-2"></span>
+            <span class="toast-body__text text--primary"></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/vendors/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendors/jquery.js"></script>
+    <script src="./assets/vendors/custom-dropdown-from-select-pure-js/dist/script.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/vendors/price-range-slider/price-range-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-image-zoom/js-image-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
