@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/style.css');?>" />
     <title>Daversi Medical | Home</title>
   </head>
-  <body class="<?php echo $this->uri->segment(2)?>">
+  <body class="<?php echo $this->uri->segment(2);?>">
     <!-- Site Header -->
     <header class="site-header bg--white">
       <div class="site-header__top bg--primary">

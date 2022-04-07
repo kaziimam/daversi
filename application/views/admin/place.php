@@ -39,7 +39,6 @@
                                 </tr>
                             </tfoot>
                             <tbody>
-                               
                                     <?php 
                                     $sr = 1;
                                         foreach($data['places'] as $data){ ?>

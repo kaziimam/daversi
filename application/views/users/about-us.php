@@ -14,5 +14,4 @@
         </div>
       </section>
     </main>
-    
 <?php $this->load->view('users/template/footer')?>

@@ -236,7 +236,5 @@
 			$this->Admin_model->activeUser($id, $data);
 			return redirect('/admin/place');
 		}
-
-
 	}
  ?>

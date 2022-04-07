@@ -406,7 +406,7 @@ body.about_us .page-title-section {
 body.product_list .page-title-section {
   background-image: url(../images/pagetitles/shop-pagetitle.jpg);
 }
-body.product_details .page-title-section {
+body.product_details .page-title-section{
   background-image: url(../images/pagetitles/product-single-pagetitle.jpg);
 }
 body.faqs .page-title-section {

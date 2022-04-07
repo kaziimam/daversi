@@ -97,8 +97,6 @@
 
 
 
-
-
 		public function login_user($user_name, $password){
 			$data = array('email_addr' => $user_name, 'password' => $password);
 			$this->db->where($data);
