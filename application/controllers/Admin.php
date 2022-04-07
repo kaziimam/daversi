@@ -135,6 +135,7 @@
 				$add_user_data['user_type'] = $this->input->post('user_type');
 				$add_user_data['img'] = $dataInfo[0]['file_name'];
 				$add_user_data['password'] = md5($this->input->post('password'));
+				$add_user_data['status'] = 1;
 
 				if($this->input->post('user_type') == "Seller"){
 					$add_user_data['license_no'] = $this->input->post('license_no');
@@ -217,6 +218,23 @@
 		public function delete_user($id){
 			$this->Admin_model->delete_user($id);
 			return redirect('/admin/users'); 
+		}
+
+		public function place(){
+			$data['data'] = array('places' => $this->Admin_model->get_all_seller());
+			$this->load->view('admin/place', $data);
+		}
+
+		public function disableUser($id){
+			$data['status'] = '0';
+			$this->Admin_model->disableUser($id, $data);
+			return redirect('/admin/place');
+		}
+
+		public function activeUser($id){
+			$data['status'] = '1';
+			$this->Admin_model->activeUser($id, $data);
+			return redirect('/admin/place');
 		}
 
 

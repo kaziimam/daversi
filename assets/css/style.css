@@ -400,13 +400,13 @@ section {
 .page-title-section .breadcrumb .breadcrumb-item.active {
   color: var(--colorSecondary);
 }
-body.about-us .page-title-section {
+body.about_us .page-title-section {
   background-image: url(../images/pagetitles/about-pagetitle.jpg);
 }
-body.shop .page-title-section {
+body.product_list .page-title-section {
   background-image: url(../images/pagetitles/shop-pagetitle.jpg);
 }
-body.product-single .page-title-section {
+body.product_details .page-title-section {
   background-image: url(../images/pagetitles/product-single-pagetitle.jpg);
 }
 body.faqs .page-title-section {

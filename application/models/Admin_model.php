@@ -69,6 +69,21 @@
 					->delete('users');
 		}
 
+		public function get_all_seller(){
+			return $this->db->where('user_type', 'Seller')
+						->get('users')->result_array();
+		}
+
+		public function disableUser($id, $data){
+			$this->db->where('id', $id)
+					->update('users', $data);
+		}
+
+		public function activeUser($id, $data){
+			$this->db->where('id', $id)
+					->update('users', $data);
+		}
+
 
 
 
